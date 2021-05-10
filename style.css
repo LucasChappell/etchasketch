@@ -1,10 +1,33 @@
+:root{
+    --row-height: 6.25%;
+    --cols: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; 
+}
 html{
     height: 100%;
 }
+@keyframes rainbow{
+    0%{
+        background-color: red;
+    }
+    20% {
+        background-color: yellow;
+    }
+    40% {
+        background-color: green;
+    }
+    60%{
+        background-color: blue;
+    }
+    80%{
+        background-color: purple;
+    }
+    100%{
+        background-color: red;
+    }
+}
 .box {
-    height: 100%;
-    width: 100%;
-    border-style: solid;
+    height: var(--row-height);
+    /* width: 100%; */
     border-width: 1px;
     margin: 0px;
 
@@ -18,7 +41,7 @@ html{
     height: 700px;
     position: fixed;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-columns: var(--cols) ;
     
     
 }
@@ -28,4 +51,49 @@ html{
 }
 .boxColored{
     background-color: black;
+}
+#black{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: solid;
+}
+#blue{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border: solid;
+}
+#red{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border: solid;
+}
+#green{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border: solid;
+}
+#white{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: solid;
+}
+#clear{
+    font-size: 10px;
+    width: 40px;
+    height: 40px;
+    border: solid;
+}
+#rainbow{
+    width: 40px;
+    height: 40px;
+    border: solid;
+    animation-name: rainbow;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+
 }
