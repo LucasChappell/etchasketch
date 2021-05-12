@@ -4,6 +4,9 @@
 }
 html{
     height: 100%;
+    animation-name: rainbow;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
 }
 @keyframes rainbow{
     0%{
@@ -42,13 +45,14 @@ html{
     position: fixed;
     display: grid;
     grid-template-columns: var(--cols) ;
+    background-color: white;
     
     
 }
-.box:hover {
+/* .box:hover {
     background-color: black;
     transition: 0s;
-}
+} */
 .boxColored{
     background-color: black;
 }
@@ -96,4 +100,22 @@ html{
     animation-iteration-count: infinite;
     animation-duration: 6s;
 
+}
+#large{
+    font-size: 10px;
+    width: 40px;
+    height: 40px;
+    border: solid;
+}
+#medium{
+    font-size: 10px;
+    width: 40px;
+    height: 40px;
+    border: solid;
+}
+#small{
+    font-size: 10px;
+    width: 40px;
+    height: 40px;
+    border: solid;
 }

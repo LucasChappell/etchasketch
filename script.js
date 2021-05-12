@@ -2,7 +2,11 @@
 const container = document.querySelector('#container')
 let root = document.documentElement;
 let penColor = 'black'
-let color = "#3345FF"
+let color = '#FFFFFF'
+function newColor(){
+    color = '#' + Math.floor(Math.random()*16777125).toString(16);
+    penColor = color
+}
 function events(){
     document.getElementById('blue').addEventListener("click", function(){
         penColor = 'blue'
@@ -25,7 +29,22 @@ function events(){
     }
     )
     document.getElementById('rainbow').addEventListener("click", function(){
-        penColor = color
+        newColor()
+        penColor=color
+        console.log(color)
+        
+    }
+    )
+    document.getElementById('large').addEventListener("click", function(){
+        createBox(250)
+    }
+    )
+    document.getElementById('medium').addEventListener("click", function(){
+        createBox(150)
+    }
+    )
+    document.getElementById('small').addEventListener("click", function(){
+        createBox(75)
     }
     )
 }
@@ -61,5 +80,5 @@ function clear(){
 
 
 events()
-createBox(160)
 clear()
+alert('select small medium or large to begin');
